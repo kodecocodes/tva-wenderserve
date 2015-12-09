@@ -1,7 +1,7 @@
 "use strict";
 
 const dataStoreVideos = require('./store/videostore.json');
-const featuredVideos = require('./store/featuredVideos.json');
+const featuredVideos = require('./store/featuredvideos.json');
 const watchlistVideos = require('./store/watchlist.json');
 
 class Video {
