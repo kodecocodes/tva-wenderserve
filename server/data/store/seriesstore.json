@@ -1,41 +1,41 @@
 [
   {
-    "image": "image-series-cover.png",
+    "image": "/images/image-series-cover.png",
     "title": "RWDevCon 2015",
     "subtitle": "All the action for the RW conference"
   },
   {
-    "image": "image-series-cover.png",
+    "image": "/images/image-series-cover.png",
     "title": "Swift 101",
     "subtitle": "Everybody's favorite of learning Swift"
   },
   {
-    "image": "image-series-cover.png",
+    "image": "/images/image-series-cover.png",
     "title": "Custom Controls",
     "subtitle": "Discover how to create amazing, reusable components"
   },
   {
-    "image": "image-series-cover.png",
+    "image": "/images/image-series-cover.png",
     "title": "Core Data",
     "subtitle": "Well, it can't all be fun"
   },
   {
-    "image": "image-series-cover.png",
+    "image": "/images/image-series-cover.png",
     "title": "watchOS 2",
     "subtitle": "Some much content about such a small device"
   },
   {
-    "image": "image-series-cover.png",
+    "image": "/images/image-series-cover.png",
     "title": "iOS 101",
     "subtitle": "Build an iOS app"
   },
   {
-    "image": "image-series-cover.png",
+    "image": "/images/image-series-cover.png",
     "title": "Unity",
     "subtitle": "Something to do with games"
   },
   {
-    "image": "image-series-cover.png",
+    "image": "/images/image-series-cover.png",
     "title": "In-App Purchase",
     "subtitle": "Seriously, don't bother"
   }
