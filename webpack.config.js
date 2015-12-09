@@ -2,10 +2,13 @@ const path = require('path');
 const webpack = require('webpack');
 
 module.exports = {
-  entry: "./client/js/app.js",
+  entry: {
+    web: "./client/web/app.js",
+    tvos: "./client/tvos/app.js"
+  },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: "bundle.js"
+    filename: "app-[name].js"
   },
   module: {
     loaders: [
