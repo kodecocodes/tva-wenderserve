@@ -5,7 +5,8 @@
   "main": "server/server.js",
   "scripts": {
     "start": "node server/server",
-    "build": "webpack --progress --colors"
+    "build": "webpack --progress --colors",
+    "postinstall": "npm run build"
   },
   "author": "Sam Davies",
   "license": "Apache-2.0",

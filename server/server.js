@@ -8,8 +8,7 @@ const photosRouter = require('./routes/photos');
 
 const app = express();
 
-var isProduction = process.env.NODE_ENV === 'production';
-var port = isProduction ? process.env.PORT : 3000;
+var port = process.env.PORT || 3000;
 var publicPath = path.resolve(__dirname, '..', 'public');
 var distPath = path.resolve(__dirname, '..', 'dist');
 
