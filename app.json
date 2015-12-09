@@ -1,0 +1,7 @@
+{
+  "name": "wenderServe",
+  "description": "Backend to the TVML app used in Ray Wenderlich's tvOS Apprentice",
+  "repository": "https://github.com/sammyd/tvt-wenderserve",
+  "logo": "https://wenderserver.herokuapp.com/images/logo.png",
+  "keywords": ["tvos", "raywenderlich", "tvml", "node", "express"]
+}
