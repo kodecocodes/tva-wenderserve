@@ -2,7 +2,7 @@
 
 This repo contains the server that supports the wenderTV TVML app developed as part of "tvOS Apprentice".
 
-To buy the book, please visit ![raywenderlich.com/store](https://raywenderlich.com/store).
+To buy the book, please visit [raywenderlich.com/store](https://raywenderlich.com/store).
 
 ## Deployment
 
