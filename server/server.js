@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const videosRouter = require('./routes/videos');
 const seriesRouter = require('./routes/series');
@@ -12,6 +13,9 @@ var port = isProduction ? process.env.PORT : 3000;
 var publicPath = path.resolve(__dirname, '..', 'public');
 var distPath = path.resolve(__dirname, '..', 'dist');
 
+//: Set up body parsing middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 //: Static routes to serve the HTML, images and bundled JS
 app.use(express.static(publicPath));

@@ -1,3 +1,5 @@
+"use strict";
+
 const dataStorePhotos = require('./store/photostore.json');
 
 class Photo {

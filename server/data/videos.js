@@ -1,3 +1,5 @@
+"use strict";
+
 const dataStoreVideos = require('./store/videostore.json');
 const featuredVideos = require('./store/featuredVideos.json');
 const watchlistVideos = require('./store/watchlist.json');
@@ -10,6 +12,8 @@ class Video {
     this.videos = allVideos;
     this.featuredIds = featuredIds;
     this.watchlistIds = watchlistIds;
+    
+    this.videoById = this.videoById.bind(this);
   }
   
   videoById(id) {
@@ -26,8 +30,8 @@ class Video {
   
   search(searchTerm) {
     return this.videos.filter(v => {
-      v.title.toLowerCase().includes(searchTerm.toLowerCase())
-        || v.imageName.toLowerCase().includes(searchTerm.toLowerCase());
+      return v.title.toLowerCase().includes(searchTerm.toLowerCase())
+        || v.presenter.toLowerCase().includes(searchTerm.toLowerCase());
     });
   }
   

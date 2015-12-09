@@ -1,3 +1,5 @@
+"use strict";
+
 const dataStoreSeries = require('./store/seriesstore.json');
 
 class Series {

@@ -1,25 +1,28 @@
 const express = require('express');
 const router = express.Router();
 
+const VideoStore = require('../data/videos');
+const videoStore = new VideoStore();
+
 router.get('/', (req, res) => {
-  res.json({ videos: ['An array of videos will be here'] });   
+  res.json(videoStore.allVideos());   
 });
 
 router.get('/featured', (req, res) => {
-  res.json({ videos: ['An array of the featured videos'] });
+  res.json(videoStore.featuredVideos());
 });
 
 router.post('/search', (req, res) =>  {
-  res.json({ videos: ['An array of the search results here']});
+  res.json(videoStore.search(req.body.q));
 });
 
 router.get('/watchlist', (req, res) => {
-  res.json({ videos: ['An array of the watchlist videos here']});
+  res.json(videoStore.watchlistVideos());
 })
 
 router.route('/:video_id')
   .get((req, res) => {
-    res.json({ video: 'result for a specific video here'});
+    res.json(videoStore.videoById(req.params.video_id));
   });
 
 module.exports = router;
