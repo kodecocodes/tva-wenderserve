@@ -11,24 +11,16 @@ You can easily deploy your own version of the server app for free to heroku by c
 
 #### Web Development Crash Course
 
-__Starter:__
+__Starter:__ n/a
 
-n/a
-
-__Final:__
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?https://github.com/sammyd/tvt-wenderserve/tree/webdev-final)
+__Final:__ [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?https://github.com/sammyd/tvt-wenderserve/tree/webdev-final)
 
 
 #### Harnessing the Server
 
-__Starter:__
+__Starter:__ n/a
 
-n/a
-
-__Final:__
-
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?https://github.com/sammyd/tvt-wenderserve/tree/harnessing-final)
+__Final:__ [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?https://github.com/sammyd/tvt-wenderserve/tree/harnessing-final)
 
 
 Any questions, then hit me up on twitter: [@iwantmyrealname](https://twitter.com/iwantmyrealname)
