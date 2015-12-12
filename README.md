@@ -6,9 +6,29 @@ To buy the book, please visit [raywenderlich.com/store](https://raywenderlich.co
 
 ## Deployment
 
-You can easily deploy your own version of the server app for free to heroku by clicking the following button:
+You can easily deploy your own version of the server app for free to heroku by clicking one of the following buttons:
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?https://github.com/sammyd/tvt-wenderserve/tree/master)
+
+#### Web Development Crash Course
+
+__Starter:__
+
+n/a
+
+__Final:__
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?https://github.com/sammyd/tvt-wenderserve/tree/webdev-final)
+
+
+#### Harnessing the Server
+
+__Starter:__
+
+n/a
+
+__Final:__
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?https://github.com/sammyd/tvt-wenderserve/tree/harnessing-final)
 
 
 Any questions, then hit me up on twitter: [@iwantmyrealname](https://twitter.com/iwantmyrealname)
