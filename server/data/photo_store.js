@@ -2,7 +2,7 @@
 
 const dataStorePhotos = require('./store/photostore.json');
 
-class Photo {
+class PhotoStore {
   constructor(photoData) {
     photoData = photoData || dataStorePhotos;
     this.photoData = photoData;
@@ -13,4 +13,4 @@ class Photo {
   } 
 }
 
-module.exports = Photo;
+module.exports = PhotoStore;

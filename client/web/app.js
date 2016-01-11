@@ -1,4 +1,4 @@
-import Mustache from 'mustache';
+
 
 function get(url) {
   return new Promise(function(resolve, reject) {
@@ -25,18 +25,4 @@ function get(url) {
   });
 }
 
-window.onload = function() {
-  const dataURL = '/api/videos/watchlist';
-  const templateURL = '/html/_videoList.mustache';
-  
-  const dataPromise = get(dataURL).then(JSON.parse);
-  const templatePromise = get(templateURL);
-  
-  Promise.all([templatePromise, dataPromise]).then(res => {
-    return Mustache.render(res[0], res[1]);
-  }).then(docString => {
-    console.log(docString);
-    var contentDiv = document.getElementById("content");
-    contentDiv.innerHTML = docString;
-  });
-}
+

@@ -2,7 +2,7 @@
 
 const dataStoreSeries = require('./store/seriesstore.json');
 
-class Series {
+class SeriesStore {
   constructor(seriesData) {
     seriesData = seriesData || dataStoreSeries;
     this.seriesData = seriesData;
@@ -13,4 +13,4 @@ class Series {
   }
 }
 
-module.exports = Series;
+module.exports = SeriesStore;

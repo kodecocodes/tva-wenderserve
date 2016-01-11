@@ -1,2 +1,1 @@
-import Mustache from 'mustache';
 
