@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/sammyd/tvt-wenderserve/issues"
   },
-  "homepage": "https://github.com/sammyd/tvt-wenderserve#readme"
+  "homepage": "https://github.com/sammyd/tvt-wenderserve#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
 }
