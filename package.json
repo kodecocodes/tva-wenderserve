@@ -1,0 +1,19 @@
+{
+  "name": "tvt-wenderserve",
+  "version": "1.0.0",
+  "description": "This repo contains the server that supports the wenderTV TVML app developed as part of \"tvOS Apprentice\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sammyd/tvt-wenderserve.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sammyd/tvt-wenderserve/issues"
+  },
+  "homepage": "https://github.com/sammyd/tvt-wenderserve#readme"
+}
