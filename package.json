@@ -10,8 +10,8 @@
     "type": "git",
     "url": "git+https://github.com/sammyd/tvt-wenderserve.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Sam Davies",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/sammyd/tvt-wenderserve/issues"
   },
