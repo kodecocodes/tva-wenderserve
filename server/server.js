@@ -21,3 +21,32 @@
  */
 
  
+const express = require('express');
+const path = require('path');
+
+const app = express();
+
+const port = process.env.PORT || 3000;
+const publicPath = path.resolve(__dirname, '..', 'public');
+
+//: Static routes to serve the HTML, images and bundled JS
+app.use(express.static(publicPath));
+
+
+//: Create a basic router
+var router = express.Router();
+
+//: Base of API
+router.get('/', (req, res) => {
+  res.json({ message: 'Welcome to the wenderServe API!'});
+});
+
+
+app.use('/api', router);
+
+
+//: Start the server
+app.listen(port, function() {
+  console.log('Server running on port ' + port);  
+});
+
