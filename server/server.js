@@ -23,6 +23,11 @@
  
 const express = require('express');
 const path = require('path');
+const bodyParser = require('body-parser');
+
+const videosRouter = require('./routes/videos');
+const seriesRouter = require('./routes/series');
+const photosRouter = require('./routes/photos');
 
 const app = express();
 
@@ -32,6 +37,8 @@ const publicPath = path.resolve(__dirname, '..', 'public');
 //: Static routes to serve the HTML, images and bundled JS
 app.use(express.static(publicPath));
 
+//: Adding middleware
+app.use(bodyParser.json());
 
 //: Create a basic router
 var router = express.Router();
@@ -43,6 +50,9 @@ router.get('/', (req, res) => {
 
 
 app.use('/api', router);
+app.use('/api/videos', videosRouter);
+app.use('/api/photos', photosRouter);
+app.use('/api/series', seriesRouter);
 
 
 //: Start the server

@@ -20,4 +20,35 @@
  * THE SOFTWARE.
  */
 
- 
+ // 1:
+const express = require('express');
+const router = express.Router();
+
+const VideoStore = require('../data/video_store');
+const videoStore = new VideoStore();
+
+// 2:
+router.get('/', (req, res) => {
+  res.json(videoStore.allVideos()); 
+});
+
+router.get('/featured', (req, res) => {
+  res.json(videoStore.featuredVideos());
+});
+
+router.post('/search', (req, res) =>  {
+  res.json(videoStore.search(req.body.q));
+});
+
+router.get('/watchlist', (req, res) => {
+  res.json(videoStore.watchlistVideos());
+})
+
+// 3:
+router.route('/:video_id')
+  .get((req, res) => {
+    res.json(videoStore.videoById(req.params.video_id));
+  });
+
+// 4:
+module.exports = router;
