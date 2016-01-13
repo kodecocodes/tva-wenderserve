@@ -20,4 +20,14 @@
  * THE SOFTWARE.
  */
 
- 
+const express = require('express');
+const router = express.Router();
+
+const PhotoStore = require('../data/photo_store');
+const photoStore = new PhotoStore();
+
+router.get('/', (req, res) => {
+  res.json(photoStore.allPhotos());
+});
+
+module.exports = router;
