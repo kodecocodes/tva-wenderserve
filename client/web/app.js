@@ -20,6 +20,8 @@
  * THE SOFTWARE.
  */
 
+ const Mustache = require("mustache");
+
 function get(url) {
   return new Promise(function(resolve, reject) {
     var req = new XMLHttpRequest();
@@ -46,3 +48,22 @@ function get(url) {
 }
 
 
+// 1:
+window.onload = function() {
+  // 2:
+  const dataURL = '/api/videos/watchlist';
+  const templateURL = '/html/_videoList.mustache';
+  
+  // 3:
+  const dataPromise = get(dataURL).then(JSON.parse);
+  const templatePromise = get(templateURL);
+  
+  // 4:
+  Promise.all([templatePromise, dataPromise]).then(res => {
+    return Mustache.render(res[0], res[1]);
+  }).then(docString => {
+    // 5:
+    var contentDiv = document.getElementById("content");
+    contentDiv.innerHTML = docString;
+  });
+}

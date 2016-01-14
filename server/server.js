@@ -36,6 +36,9 @@ const publicPath = path.resolve(__dirname, '..', 'public');
 
 //: Static routes to serve the HTML, images and bundled JS
 app.use(express.static(publicPath));
+const distPath = path.resolve(__dirname, '..', 'dist');
+app.use(express.static(distPath));
+
 
 //: Adding middleware
 app.use(bodyParser.json());
