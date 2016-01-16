@@ -20,25 +20,23 @@
  * THE SOFTWARE.
  */
 
+import Mustache from 'mustache';
 
-class ResourceLoaderJS {
-  constructor(nativeResourceLoader) {
-    this.nativeResourceLoader = nativeResourceLoader;
+class ResourceLoader {
+  constructor(networkController) {
+    this._networkController = networkController;
     this.domParser = new DOMParser();
   }
 
   getDocument(name, data) {
     data = data || {};
-    var docString = this.nativeResourceLoader.loadBundleResource(name);
-    var rendered = Mustache.render(docString, data);
-
-    return this.domParser.parseFromString(rendered, "application/xml");
-  }
-
-  getJSON(name) {
-    var jsonString = this.nativeResourceLoader.loadBundleResource(name);
-    var json = JSON.parse(jsonString);
-    return json;
+    const path = `/tvml/layouts/${name}`;
+    return this._networkController.getPath(path)
+      .then(docString =>  {
+        const rendered = Mustache.render(docString, data);
+        return this.domParser.parseFromString(rendered,
+          "application/xml");
+    })
   }
 
   urlForResource(name) {
@@ -77,3 +75,5 @@ function recursiveApplyOnKey(obj, key, callback) {
     }
   }
 }
+
+module.exports = ResourceLoader;
