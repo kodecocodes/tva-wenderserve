@@ -88,3 +88,5 @@ class SearchHandler {
   }
 
 }
+
+module.exports = SearchHandler;
