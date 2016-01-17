@@ -20,7 +20,8 @@
  * THE SOFTWARE.
  */
 
-import Mustache from 'mustache';
+require("babel-polyfill");
+
 
 App.onLaunch = function(options) {
   evaluateScripts(options.initialJSDependencies, function(success){
