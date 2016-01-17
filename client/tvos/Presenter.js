@@ -40,7 +40,7 @@ class Presenter {
     dataPromise = dataPromise || Promise.resolve(null);
     dataPromise = dataPromise.then(data => 
       this._enchancedDataForTemplate(data, template));
-    const docPromise = dataPromise.then(data => 
+    var docPromise = dataPromise.then(data => 
       this._resourceLoader.getDocument(template, data));
 
     if(eventHandler) {
