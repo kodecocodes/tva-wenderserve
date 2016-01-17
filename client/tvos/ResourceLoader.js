@@ -40,7 +40,7 @@ class ResourceLoader {
   }
 
   urlForResource(name) {
-    return this.nativeResourceLoader.urlForResource(name);
+    return this._networkController.urlFromPath(name);
   }
 
   convertNamesToURLs(data) {
