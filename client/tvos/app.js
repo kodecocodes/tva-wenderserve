@@ -22,38 +22,27 @@
 
 require("babel-polyfill");
 
+import NetworkController from './NetworkController.js';
+import ResourceLoader from './ResourceLoader.js';
+import DataController from './DataController.js';
+import EventHandler from './EventHandler.js';
+import Presenter from './Presenter.js';
+import SearchHandler from './SearchHandler.js';
+
 
 App.onLaunch = function(options) {
-  evaluateScripts(options.initialJSDependencies, function(success){
-    if (success) {
-      var resourceLoader = new ResourceLoaderJS(NativeResourceLoader.create());
-      var dataController = new DataController(resourceLoader);
-      var searchHandler = new SearchHandler(resourceLoader, dataController);
-      var presenter = new Presenter(resourceLoader, searchHandler);
-      var eventHandler = new EventHandler(presenter, dataController);
+  const host =
+    options["host"] || "https://wenderserve.herokuapp.com";
 
-      presenter.present("rootMenu.tvml", null, "push", eventHandler);
-    } else {
-      var alert = createAlert("Evaluate Scripts Error", "There was an error attempting to evaluate the external JavaScript files.");
-      navigationDocument.presentModal(alert);
+  const networkController = new NetworkController(host);
+  const resourceLoader = new ResourceLoader(networkController);
+  const dataController = new DataController(networkController);
+  const searchHandler =
+    new SearchHandler(resourceLoader, dataController);
+  const presenter = new Presenter(resourceLoader, searchHandler);
+  const eventHandler =
+    new EventHandler(presenter, dataController);
 
-      throw ("Playback Example: unable to evaluate scripts.");
-    }
-  });
-  
-};
-
-var createAlert = function(title, description) {  
-  var alertString = `<?xml version="1.0" encoding="UTF-8" ?>
-    <document>
-      <alertTemplate>
-        <title>${title}</title>
-        <description>${description}</description>
-      </alertTemplate>
-    </document>`
-
-  var parser = new DOMParser();
-  var alertDoc = parser.parseFromString(alertString, "application/xml");
-  return alertDoc
+  presenter.present("rootMenu.tvml", null, "push", eventHandler);
 };
 
