@@ -27,37 +27,45 @@ class Presenter {
     this._searchHandler = searchHandler;
   }
 
-  present(template, data, presentation, eventHandler, sender) {
+  present(template, dataPromise, presentation,
+    eventHandler, sender) {
     if (presentation === 'dismiss') {
       navigationDocument.dismissModal();
       return;
     } else if (presentation === 'playVideo') {
-      this._playVideo(data, eventHandler);
+      dataPromise.then(data => this._playVideo(data, eventHandler));
       return;
     }
 
-    var enhancedData = this._enchancedDataForTemplate(data, template);
-    var doc = this._resourceLoader.getDocument(template, enhancedData);
+    dataPromise = dataPromise || Promise.resolve(null);
+    dataPromise = dataPromise.then(data => 
+      this._enchancedDataForTemplate(data, template));
+    const docPromise = dataPromise.then(data => 
+      this._resourceLoader.getDocument(template, data));
 
     if(eventHandler) {
-      eventHandler.addEventHandlersToDoc(doc);
+      docPromise = docPromise.then(doc =>
+        eventHandler.addEventHandlersToDoc(doc));
     }
 
     if(template === 'search.tvml') {
-      this._searchHandler.registerDocForSearch(doc);
+      docPromise = docPromise.then(doc =>
+        this._searchHandler.registerDocForSearch(doc));
     }
 
-    switch (presentation) {
-      case 'modal':
-        navigationDocument.presentModal(doc);
-        break;
-      case 'push':
-        navigationDocument.pushDocument(doc);
-        break;
-      case 'menuBar':
-        this._presentMenuBarItem(doc, sender);
-        break;
-    }
+    docPromise.then(doc => {
+      switch (presentation) {
+        case 'modal':
+          navigationDocument.presentModal(doc);
+          break;
+        case 'push':
+          navigationDocument.pushDocument(doc);
+          break;
+        case 'menuBar':
+          this._presentMenuBarItem(doc, sender);
+          break;
+      }
+    });
 
   }
 
@@ -133,3 +141,5 @@ class Presenter {
   }
 
 }
+
+module.exports = Presenter;
