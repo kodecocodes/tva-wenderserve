@@ -110,7 +110,7 @@ class Presenter {
     enhancedData = this._resourceLoader.recursivelyConvertFieldsToURLs(enhancedData, "image");
 
     if(template === 'video.tvml') {
-      enhancedData["images"] = this._convertURLValuesInObject(data["images"]);
+      enhancedData.sharedImages = this._sharedImageResources()
     }
 
     return enhancedData;
