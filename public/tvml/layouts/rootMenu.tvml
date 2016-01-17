@@ -8,7 +8,7 @@
       <menuItem template="search.tvml" presentation="menuBar">
         <title>Search</title>
       </menuItem>
-      <menuItem template="photos.tvml" data="photos.json" presentation="menuBar">
+      <menuItem template="photos.tvml" data="/api/photos" presentation="menuBar">
         <title>Photos</title>
       </menuItem>
     </menuBar>
