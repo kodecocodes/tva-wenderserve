@@ -5,7 +5,7 @@
       <menuItem template="homeScreen.tvml" data="homeScreen.json" presentation="menuBar">
         <title>Videos</title>
       </menuItem>
-      <menuItem template="search.tvml" data="search.json" presentation="menuBar">
+      <menuItem template="search.tvml" presentation="menuBar">
         <title>Search</title>
       </menuItem>
       <menuItem template="photos.tvml" data="photos.json" presentation="menuBar">
