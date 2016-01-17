@@ -31,7 +31,7 @@ class PhotoStore {
   }
   
   allPhotos() {
-    return this.photoData;
+    return { photos: this.photoData };
   } 
 }
 
