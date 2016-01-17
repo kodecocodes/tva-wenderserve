@@ -21,8 +21,8 @@
  */
 
 class DataController {
-  constructor(resourceLoader) {
-    this._resourceLoader = resourceLoader;
+  constructor(networkController) {
+    this._networkController = networkController;
   }
 
   retrieveData(data, presentation) {
@@ -33,10 +33,10 @@ class DataController {
           decodedData.resumeTime =
             this.progressForVideoAtURL(decodedData.videoURL);
         }
-        return decodedData;
+        return Promise.resolve(decodedData);
       } catch(error) {
-        // Wasn't sent a JSON string. Try to load the file instead.
-        return this._loadDataFromFile(data);
+        // Wasn't sent a JSON string. Try to load the data from the API instead.
+        return this._loadDataFromAPI(data);
       }
 
     }
@@ -52,21 +52,12 @@ class DataController {
   }
 
   searchVideosForString(searchString) {
-    var sourceData = this._loadDataFromFile("videoDatabase.json");
-
-    var results = sourceData.filter(function(v) {
-      var title = v.title;
-      var imageName = v.image;
-
-      return title.toLowerCase().includes(searchString.toLowerCase())
-        || imageName.toLowerCase().includes(searchString.toLowerCase());
-    });
-
-    return results;
+    // TODO
   }
 
-  _loadDataFromFile(fileName) {
-    return this._resourceLoader.getJSON(fileName);
+  _loadDataFromAPI(endpoint) {
+    return this._networkController.getJSON(endpoint);
   }
-
 }
+
+module.exports = DataController;
