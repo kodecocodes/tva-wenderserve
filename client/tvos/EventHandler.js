@@ -31,6 +31,7 @@ class EventHandler {
 
   addEventHandlersToDoc(doc) {
     doc.addEventListener("select", this.handleEvent);
+    return doc;
   }
 
   handlePlaybackUpdates(event) {

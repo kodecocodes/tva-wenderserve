@@ -32,6 +32,7 @@ class SearchHandler {
 
   registerDocForSearch(doc) {
     this._addSearchHandlerToDoc(doc);
+    return doc;
   }
 
   _addSearchHandlerToDoc(doc) {
