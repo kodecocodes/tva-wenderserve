@@ -52,7 +52,8 @@ class DataController {
   }
 
   searchVideosForString(searchString) {
-    // TODO
+    return this._networkController
+      .postAndReturnJSON('/api/videos/search', { q: searchString });
   }
 
   _loadDataFromAPI(endpoint) {
