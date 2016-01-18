@@ -61,7 +61,7 @@
           <lockup
             presentation="push"
             template="video.tvml"
-            data="{{data}}">
+            data="/api/videos/{{id}}">
             <img src="{{image}}" width="402" height="226" />
             <title>{{title}}</title>
           </lockup>
