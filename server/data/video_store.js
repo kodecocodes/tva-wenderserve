@@ -20,14 +20,42 @@
  * THE SOFTWARE.
  */
 
-const express = require('express');
-const router = express.Router();
+ "use strict";
 
-const PhotoStore = require('../data/photo_store');
-const photoStore = new PhotoStore();
+const dataStoreVideos = require('./store/videostore.json');
+const featuredVideos = require('./store/featuredvideos.json');
+const watchlistVideos = require('./store/watchlist.json');
 
-router.get('/', (req, res) => {
-  res.json(photoStore.allPhotos());
-});
+class VideoStore {
+  constructor(allVideos, featuredIds, watchlistIds) {
+    this._videos = allVideos || dataStoreVideos;
+    this._featuredIds = featuredIds || featuredVideos;
+    this._watchlistIds = watchlistIds || watchlistVideos;
+  }
 
-module.exports = router;
+  allVideos() {
+    return this._videos;
+  }
+
+  videoById(id) {
+    return this._videos.find( v => v.id === id );
+  }
+
+  featuredVideos() {
+    return this._featuredIds.map(this.videoById.bind(this));
+  }
+
+  watchlistVideos() {
+    return this._watchlistIds.map(this.videoById.bind(this));
+  }
+
+  search(searchTerm) {
+    return this._videos.filter(v => {
+      const lcSearchTerm = searchTerm.toLowerCase();
+      return v.title.toLowerCase().includes(lcSearchTerm)
+        || v.presenter.toLowerCase().includes(lcSearchTerm);
+    });
+  }
+}
+
+module.exports = VideoStore;

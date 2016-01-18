@@ -10,19 +10,17 @@
     "category": "Inspiration",
     "year": "2015",
     "videoURL" : "http://www.rwdevcon.com/videos/Chris-Wagner-Craftsmanship.mp4",
-    "images": {
-      "hero": "/images/talk-chris-wagner-craftsmanship.png"
-    },
+    "image": "/images/talk-chris-wagner-craftsmanship.png",
     "closed-captions": true,
     "rating": "nr",
     "description": "In the world of deadlines and ongoing pressure, we often lose sight of what we set out to achieve. Writing software leaves immense opportunity to sweep things under the rug. It's time to stop cheating ourselves and society. Every one of us is building the future of this world; let's make it great through craftsmanship.",
     "language": "English",
     "recommendations": [
-      { "title": "Recognition", "image": "/images/talk-cesare-rocchi-recognition.png", "data": "recognition.json"},
-      { "title": "Starting Over", "image": "/images/talk-ellen-shapiro-starting-over.png", "data": "starting-over.json"},
-      { "title": "Identity", "image": "/images/talk-vicki-wenderlich-identity.png", "data": "identity.json"},
-      { "title": "RW Folklore", "image": "/images/talk-marin-todorov-rw-folklore.png", "data": "rw-folklore.json"},
-      { "title": "Teamwork", "image": "/images/talk-ray-wenderlich-teamwork.jpeg", "data": "teamwork.json" }
+      { "title": "Cognition", "image": "/images/talk-cesare-rocchi-recognition.png", "id": "000003"},
+      { "title": "Starting Over", "image": "/images/talk-ellen-shapiro-starting-over.png", "id": "000005"},
+      { "title": "Identity", "image": "/images/talk-vicki-wenderlich-identity.png", "id": "000002"},
+      { "title": "RW Folklore", "image": "/images/talk-marin-todorov-rw-folklore.png", "id": "000004"},
+      { "title": "Teamwork", "image": "/images/talk-ray-wenderlich-teamwork.jpeg", "id": "000006" }
     ],
     "ratings-reviews": {
       "rw-ratings": {
@@ -80,19 +78,17 @@
     "category": "Inspiration",
     "year": "2015",
     "videoURL" : "http://www.rwdevcon.com/videos/Vicki-Wenderlich-Identity.mp4",
-    "images": {
-      "hero": "/images/talk-vicki-wenderlich-identity.png"
-    },
+    "image": "/images/talk-vicki-wenderlich-identity.png",
     "closed-captions": true,
     "rating": "nr",
     "description": "We all have a concept of our own identity: as a developer, an artist, etc. But when our internal identity doesn't match our external actions, we feel a lot of stress and negative feelings. In this talk, join Vicki in exploring how these identity conflicts affect our moods, through Vicki's childhood growing up as an identical twin, to an adult with constantly shifting career paths.",
     "language": "English",
     "recommendations": [
-      { "title": "Recognition", "image": "/images/talk-cesare-rocchi-recognition.png", "data": "recognition.json"},
-      { "title": "Craftsmanship", "image": "/images/talk-chris-wagner-craftsmanship.png", "data": "craftsmanship.json"},
-      { "title": "Starting Over", "image": "/images/talk-ellen-shapiro-starting-over.png", "data": "starting-over.json"},
-      { "title": "RW Folklore", "image": "/images/talk-marin-todorov-rw-folklore.png", "data": "rw-folklore.json"},
-      { "title": "Teamwork", "image": "/images/talk-ray-wenderlich-teamwork.jpeg", "data": "teamwork.json" }
+      { "title": "Craftsmanship", "image": "/images/talk-chris-wagner-craftsmanship.png", "id": "000001" },
+      { "title": "Cognition", "image": "/images/talk-cesare-rocchi-recognition.png", "id": "000003"},
+      { "title": "Starting Over", "image": "/images/talk-ellen-shapiro-starting-over.png", "id": "000005"},
+      { "title": "RW Folklore", "image": "/images/talk-marin-todorov-rw-folklore.png", "id": "000004"},
+      { "title": "Teamwork", "image": "/images/talk-ray-wenderlich-teamwork.jpeg", "id": "000006" }
     ],
     "ratings-reviews": {
       "rw-ratings": {
@@ -150,19 +146,17 @@
     "category": "Inspiration",
     "year": "2015",
     "videoURL" : "http://www.rwdevcon.com/videos/Cesare-Rocchi-Cognition.mp4",
-    "images": {
-      "hero": "/images/talk-cesare-rocchi-recognition.png"
-    },
+    "image": "/images/talk-cesare-rocchi-recognition.png",
     "closed-captions": true,
     "rating": "nr",
     "description": "We are all different and we perceive/think in many different ways. And yet there are many universal patterns when it comes to use our cognition. In this talk, learn how to exploit these universal patterns to create well designed applications.",
     "language": "English",
     "recommendations": [
-      { "title": "Craftsmanship", "image": "/images/talk-chris-wagner-craftsmanship.png", "data": "craftsmanship.json"},
-      { "title": "Starting Over", "image": "/images/talk-ellen-shapiro-starting-over.png", "data": "starting-over.json"},
-      { "title": "Identity", "image": "/images/talk-vicki-wenderlich-identity.png", "data": "identity.json"},
-      { "title": "RW Folklore", "image": "/images/talk-marin-todorov-rw-folklore.png", "data": "rw-folklore.json"},
-      { "title": "Teamwork", "image": "/images/talk-ray-wenderlich-teamwork.jpeg", "data": "teamwork.json" }
+      { "title": "Craftsmanship", "image": "/images/talk-chris-wagner-craftsmanship.png", "id": "000001" },
+      { "title": "Starting Over", "image": "/images/talk-ellen-shapiro-starting-over.png", "id": "000005"},
+      { "title": "Identity", "image": "/images/talk-vicki-wenderlich-identity.png", "id": "000002"},
+      { "title": "RW Folklore", "image": "/images/talk-marin-todorov-rw-folklore.png", "id": "000004"},
+      { "title": "Teamwork", "image": "/images/talk-ray-wenderlich-teamwork.jpeg", "id": "000006" }
     ],
     "ratings-reviews": {
       "rw-ratings": {
@@ -220,19 +214,17 @@
     "category": "Inspiration",
     "year": "2015",
     "videoURL" : "http://www.rwdevcon.com/videos/Marin-Todorov-RW-Folklore.mp4",
-    "images": {
-      "hero": "/images/talk-marin-todorov-rw-folklore.png"
-    },
+    "image": "/images/talk-marin-todorov-rw-folklore.png",
     "closed-captions": true,
     "rating": "nr",
     "description": "I often get asked at iOS conferences and meetups, “What's it like to write for raywenderlich.com?”, “Have you ever met Ray - what's he like?”, or “How did the team grow over the years?” If you're curious about the answers to these and more - this session is for you! Take a break from the intensive tutorials in the conference, and enjoy some amusing inside stories about the team and Ray himself.",
     "language": "English",
     "recommendations": [
-      { "title": "Recognition", "image": "/images/talk-cesare-rocchi-recognition.png", "data": "recognition.json"},
-      { "title": "Craftsmanship", "image": "/images/talk-chris-wagner-craftsmanship.png", "data": "craftsmanship.json"},
-      { "title": "Starting Over", "image": "/images/talk-ellen-shapiro-starting-over.png", "data": "starting-over.json"},
-      { "title": "Identity", "image": "/images/talk-vicki-wenderlich-identity.png", "data": "identity.json"},
-      { "title": "Teamwork", "image": "/images/talk-ray-wenderlich-teamwork.jpeg", "data": "teamwork.json" }
+      { "title": "Craftsmanship", "image": "/images/talk-chris-wagner-craftsmanship.png", "id": "000001" },
+      { "title": "Cognition", "image": "/images/talk-cesare-rocchi-recognition.png", "id": "000003"},
+      { "title": "Starting Over", "image": "/images/talk-ellen-shapiro-starting-over.png", "id": "000005"},
+      { "title": "Identity", "image": "/images/talk-vicki-wenderlich-identity.png", "id": "000002"},
+      { "title": "Teamwork", "image": "/images/talk-ray-wenderlich-teamwork.jpeg", "id": "000006" }
     ],
     "ratings-reviews": {
       "rw-ratings": {
@@ -290,19 +282,17 @@
     "category": "Inspiration",
     "year": "2015",
     "videoURL" : "http://www.rwdevcon.com/videos/Ellen-Shapiro-Starting-Over.mp4",
-    "images": {
-      "hero": "/images/talk-ellen-shapiro-starting-over.png"
-    },
+    "image": "/images/talk-ellen-shapiro-starting-over.png",
     "closed-captions": true,
     "rating": "nr",
     "description": "Choosing to change your life or career significantly can be terrifying. Ellen Shapiro has done it twice, and learned a ton. Learn how to determine when it's time to choose a new path, and how to reframe your fears into strengths to build the courage to make a change.",
     "language": "English",
     "recommendations": [
-      { "title": "Recognition", "image": "/images/talk-cesare-rocchi-recognition.png", "data": "recognition.json"},
-      { "title": "Craftsmanship", "image": "/images/talk-chris-wagner-craftsmanship.png", "data": "craftsmanship.json"},
-      { "title": "Identity", "image": "/images/talk-vicki-wenderlich-identity.png", "data": "identity.json"},
-      { "title": "RW Folklore", "image": "/images/talk-marin-todorov-rw-folklore.png", "data": "rw-folklore.json"},
-      { "title": "Teamwork", "image": "/images/talk-ray-wenderlich-teamwork.jpeg", "data": "teamwork.json" }
+      { "title": "Craftsmanship", "image": "/images/talk-chris-wagner-craftsmanship.png", "id": "000001" },
+      { "title": "Cognition", "image": "/images/talk-cesare-rocchi-recognition.png", "id": "000003"},
+      { "title": "Identity", "image": "/images/talk-vicki-wenderlich-identity.png", "id": "000002"},
+      { "title": "RW Folklore", "image": "/images/talk-marin-todorov-rw-folklore.png", "id": "000004"},
+      { "title": "Teamwork", "image": "/images/talk-ray-wenderlich-teamwork.jpeg", "id": "000006" }
     ],
     "ratings-reviews": {
       "rw-ratings": {
@@ -360,19 +350,17 @@
     "category": "Inspiration",
     "year": "2015",
     "videoURL" : "http://www.rwdevcon.com/videos/Ray-Wenderlich-Teamwork.mp4",
-    "images": {
-      "hero": "/images/talk-ray-wenderlich-teamwork.jpeg"
-    },
+    "image": "/images/talk-ray-wenderlich-teamwork.jpeg",
     "closed-captions": false,
     "rating": "nr",
     "description": "Learn how teamwork lets you dream bigger, through the story of an indie iPhone developer who almost missed out on the greatest opportunity of his life.",
     "language": "English",
     "recommendations": [
-      { "title": "Recognition", "image": "/images/talk-cesare-rocchi-recognition.png", "data": "recognition.json"},
-      { "title": "Craftsmanship", "image": "/images/talk-chris-wagner-craftsmanship.png", "data": "craftsmanship.json"},
-      { "title": "Starting Over", "image": "/images/talk-ellen-shapiro-starting-over.png", "data": "starting-over.json"},
-      { "title": "Identity", "image": "/images/talk-vicki-wenderlich-identity.png", "data": "identity.json"},
-      { "title": "RW Folklore", "image": "/images/talk-marin-todorov-rw-folklore.png", "data": "rw-folklore.json"}
+      { "title": "Craftsmanship", "image": "/images/talk-chris-wagner-craftsmanship.png", "id": "000001" },
+      { "title": "Cognition", "image": "/images/talk-cesare-rocchi-recognition.png", "id": "000003"},
+      { "title": "Starting Over", "image": "/images/talk-ellen-shapiro-starting-over.png", "id": "000005"},
+      { "title": "Identity", "image": "/images/talk-vicki-wenderlich-identity.png", "id": "000002"},
+      { "title": "RW Folklore", "image": "/images/talk-marin-todorov-rw-folklore.png", "id": "000004"}
     ],
     "ratings-reviews": {
       "rw-ratings": {

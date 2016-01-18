@@ -19,15 +19,20 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
+ 
+"use strict";
 
-const express = require('express');
-const router = express.Router();
+const dataStorePhotos = require('./store/photostore.json');
 
-const PhotoStore = require('../data/photo_store');
-const photoStore = new PhotoStore();
+class PhotoStore {
+  constructor(photoData) {
+    photoData = photoData || dataStorePhotos;
+    this.photoData = photoData;
+  }
+  
+  allPhotos() {
+    return { photos: this.photoData };
+  } 
+}
 
-router.get('/', (req, res) => {
-  res.json(photoStore.allPhotos());
-});
-
-module.exports = router;
+module.exports = PhotoStore;
