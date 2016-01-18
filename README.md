@@ -10,8 +10,8 @@ You can easily deploy your own version of the server app for free to Heroku by c
 
 | Chapter | Starter | Final |
 |---------|---------|-------|
-|Harnessing the Server | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?https://github.com/sammyd/tvt-wenderserve/tree/harnessing-starter) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?https://github.com/sammyd/tvt-wenderserve/tree/harnessing-final) |
-| Server Deployment | - | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?https://github.com/raywenderlich/tva-wenderserve/tree/deployment-final) |
+|Harnessing the Server | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sammyd/tvt-wenderserve/tree/harnessing-starter) | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/sammyd/tvt-wenderserve/tree/harnessing-final) |
+| Server Deployment | - | [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/raywenderlich/tva-wenderserve/tree/deployment-final) |
 
 
 Any questions, gimme a shout [@iwantmyrealname](https://twitter.com/iwantmyrealname)
