@@ -51,12 +51,12 @@ class SearchHandler {
 
   _handleSearch(keyboard, doc) {
     var searchString = keyboard.text;
-    var results = [];
+    var results = Promise.resolve([]);
     if (searchString.length) {
       results = this._dataController.searchVideosForString(searchString);
     }
     // 1:
-    var resultNodes = this._renderResults(results);
+    var resultNodesPromise = results.then(this._renderResults);
     // 2:
     var resultContainer = doc.getElementById("results");
     if(resultContainer) {
@@ -65,10 +65,11 @@ class SearchHandler {
         resultContainer.removeChild(resultContainer.lastChild);
       }
       // 4:
-      resultNodes.forEach(function(resultNode) {
-        // 5:
-        doc.adoptNode(resultNode);
-        resultContainer.appendChild(resultNode);
+      resultNodesPromise.then(resultNodes => {
+        resultNodes.forEach(function(resultNode) {
+          doc.adoptNode(resultNode);
+          resultContainer.appendChild(resultNode);
+        });
       });
     }
   }
@@ -82,9 +83,9 @@ class SearchHandler {
       var doc =
         resourceLoader.getDocument("_searchResult.tvml", result);
       // 3:
-      return doc.documentElement;
+      return doc.then(d => d.documentElement);
     });
-    return rendered;
+    return Promise.all(rendered);
   }
 
 }
