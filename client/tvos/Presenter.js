@@ -84,11 +84,10 @@ class Presenter {
     player.playlist.push(video);
 
     var overlayData = {
-      logo: this._resourceLoader.urlForResource("logo.png")
+      logo: this._resourceLoader.urlForResource("/images/logo.png")
     };
-    var overlay = this._resourceLoader
+    var overlayPromise = this._resourceLoader
       .getDocument("videoLogoOverlay.tvml", overlayData);
-    player.overlayDocument = overlay;
 
     player.addEventListener("timeDidChange",
       eventHandler.handlePlaybackUpdates,
@@ -97,7 +96,11 @@ class Presenter {
     video.resumeTime = data.resumeTime;
     
     // 4:
-    player.play();
+    overlayPromise.then(overlay => {
+      player.overlayDocument = overlay;
+      player.play();
+    });
+
   }
 
   _presentMenuBarItem(doc, menuItem) {
