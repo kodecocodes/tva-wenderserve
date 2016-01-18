@@ -35,14 +35,14 @@
           <title>Top-Rated Series</title>
         </header>
         <section>
-          {{#topSeries}}
+          {{#series}}
             <lockup>
-              <img src="{{image}}" width="332" height="500" />
+              <img src="{{{image}}}" width="332" height="500" />
               <overlay>
                 <title>{{title}}</title>
               </overlay>
             </lockup>
-          {{/topSeries}}
+          {{/series}}
         </section>
       </shelf>
 
