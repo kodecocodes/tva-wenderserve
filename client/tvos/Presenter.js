@@ -118,10 +118,11 @@ class Presenter {
 
   _sharedImageResources() {
     var sharedImageNames = {
-      heads: "heads.png",
-      face: "face.png",
-      rock: "rock.png",
-      background: "tv_background.png"
+      heads: "/images/heads.png",
+      face: "/images/face.png",
+      rock: "/images/rock.png",
+      background: "/images/tv_background.png",
+      featured: "/images/rwdevcon-featured.lsr"
     };
 
     return this._convertURLValuesInObject(sharedImageNames);

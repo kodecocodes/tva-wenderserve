@@ -20,7 +20,7 @@
         <section>
           {{#featured}}
             <lockup template="{{template}}" data="{{data}}" presentation="push">
-              <img src="{{image}}" width="1740" height="500" />
+              <img src="{{{sharedImages.featured}}}" width="1740" height="500" />
               <overlay>
                 <title>{{title}}</title>
                 <subtitle>{{subtitle}}</subtitle>
