@@ -36,7 +36,11 @@ class DataController {
         return Promise.resolve(decodedData);
       } catch(error) {
         // Wasn't sent a JSON string. Try to load the data from the API instead.
-        return this._loadDataFromAPI(data);
+        if(data === "HOMESCREEN") {
+          return this._homeScreenData();
+        } else {
+          return this._loadDataFromAPI(data);
+        }
       }
 
     }
@@ -58,6 +62,22 @@ class DataController {
 
   _loadDataFromAPI(endpoint) {
     return this._networkController.getJSON(endpoint);
+  }
+
+  _homeScreenData() {
+    const dataPromises = [
+      "/api/videos/featured",
+      "/api/series",
+      "/api/videos/watchlist"
+    ].map(this.retrieveData.bind(this));
+
+    return Promise.all(dataPromises).then(results => {
+      return {
+        featured: results[0],
+        series: results[1],
+        watchlist: results[2]
+      };
+    });
   }
 }
 

@@ -2,7 +2,7 @@
 <document>
   <menuBarTemplate>
     <menuBar>
-      <menuItem template="homeScreen.tvml" data="homeScreen.json" presentation="menuBar">
+      <menuItem template="homeScreen.tvml" data="HOMESCREEN" presentation="menuBar">
         <title>Videos</title>
       </menuItem>
       <menuItem template="search.tvml" presentation="menuBar">
