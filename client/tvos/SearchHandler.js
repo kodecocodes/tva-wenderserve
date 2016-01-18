@@ -28,6 +28,7 @@ class SearchHandler {
     this._dataController = dataController;
     this._addSearchHandlerToDoc =
       this._addSearchHandlerToDoc.bind(this);
+    this._renderResults = this._renderResults.bind(this);
   }
 
   registerDocForSearch(doc) {
@@ -77,8 +78,7 @@ class SearchHandler {
     // 1:
     var rendered = results.map(function(result) {
       // 2:
-      result["image"] =
-        resourceLoader.urlForResource(result["image"]);
+      result = resourceLoader.recursivelyConvertFieldsToURLs(result, "image");
       var doc =
         resourceLoader.getDocument("_searchResult.tvml", result);
       // 3:
