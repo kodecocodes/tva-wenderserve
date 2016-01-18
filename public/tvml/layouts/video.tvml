@@ -49,7 +49,7 @@
           </buttonLockup>
         </row>
       </stack>
-      <heroImg src="{{images.hero}}" />
+      <heroImg src="{{image}}" />
     </banner>
 
     <shelf>
