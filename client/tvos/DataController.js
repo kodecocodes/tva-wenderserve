@@ -44,7 +44,7 @@ class DataController {
       }
 
     }
-    return null;
+    return Promise.resolve(null);
   }
 
   progressForVideoAtURL(url) {

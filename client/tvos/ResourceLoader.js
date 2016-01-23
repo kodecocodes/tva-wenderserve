@@ -36,7 +36,7 @@ class ResourceLoader {
         const rendered = Mustache.render(docString, data);
         return this.domParser.parseFromString(rendered,
           "application/xml");
-    })
+    });
   }
 
   urlForResource(name) {
